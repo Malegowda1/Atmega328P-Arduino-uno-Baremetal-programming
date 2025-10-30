@@ -28,6 +28,7 @@ SPI (hardware): MOSI = PB3(D11), MISO = PB4(D12), SCK = PB5(D13), SS = PB2(D10)
 I2C / TWI: SDA = PC4(A4), SCL = PC5(A5)
 ADC channels: ADC0..ADC5 = PC0..PC5 (10-bit)(A0 to A5)
 External interrupts: INT0 = PD2(D2), INT1 = PD3(D3)
+**2.digital I/O ports**
 
 
 
