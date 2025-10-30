@@ -22,8 +22,6 @@ SPI: high-speed synchronous master/slave bus (full duplex). Use the SS pin to se
 I2C/TWI: multi-device two-wire bus requiring pull-up resistors on SDA/SCL; check status codes when implementing the master routines.  
 **8.Interrupts**
 External and peripheral interrupts enable responsive designs; keep ISR code short and hand off heavier work to the main loop.  
-**9.Peripherals share pins**
-Many pins have alternate functions (e.g., ADC, TWI, SPI, UART, PWM). Verify the pin function mapping before assigning pins to peripherals.  
 **Quick pin/function reference**
 UART: RX = PD0, TX = PD1
 SPI (hardware): MOSI = PB3(D11), MISO = PB4(D12), SCK = PB5(D13), SS = PB2(D10)
