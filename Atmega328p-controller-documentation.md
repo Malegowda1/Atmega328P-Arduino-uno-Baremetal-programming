@@ -3,3 +3,4 @@ for its reliability and versatility in embedded systems. Here, you'll find compr
 Architecture, Memory layout and each major feature of the controller including digital I/O ports,Timers, PWM, ADC, UART,
 SPI, I2C.
 **1.Controller Architecture**
+
