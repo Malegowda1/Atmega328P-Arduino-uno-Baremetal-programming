@@ -1,2 +1,2 @@
 # Atmega328P-Arduino-uno-Baremetal-programming
-This repo consists of the baremetal codes of the atmega328p 
+Baremetal programming examples for the ATmega328P microcontroller, covering fundamental concepts such as Timers, PWM, ADC, UART, SPI, I2C, and I/O Ports. Each program demonstrates direct hardware register manipulation without external libraries.
