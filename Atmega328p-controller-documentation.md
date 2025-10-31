@@ -1,7 +1,7 @@
 This repository provides a detailed explination of the ATmega328P microcontroller, a widely used 8-bit AVR device known 
 for its reliability and versatility in embedded systems. Here, you'll find comprehensive explanations for Controller 
 Architecture, Memory layout and each major feature of the controller including digital I/O ports,Timers, PWM, ADC, UART,SPI, I2C.  
-**1.Controller Architecture**
+**1.Controller Architecture**  
 <img width="788" height="521" alt="image" src="https://github.com/user-attachments/assets/fec84532-65fe-4817-9d8e-9d216c05e22c" />
 This block diagram shows the major functional blocks and I/O of the ATmega328P microcontroller. It highlights the CPU and memory (Flash, SRAM, EEPROM), the system bus, clock and reset circuitry, and the main peripherals used in baremetal programming: timers/counters, PWM outputs, the 10-bit ADC, serial interfaces (UART, SPI, I2C/TWI), and general-purpose I/O ports (PORTB, PORTC, PORTD).  
 **1.CPU & memory**
