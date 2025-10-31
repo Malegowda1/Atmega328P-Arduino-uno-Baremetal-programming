@@ -17,11 +17,11 @@ Timer counts from BOTTOM (0) to a user-defined TOP value in OCRxA.
 When TCNTx == OCRxA, the timer resets to 0.
 Useful for generating periodic interrupts or precise timing.  
 3.PWM Modes
-PWM (Pulse Width Modulation) is used to generate variable duty cycle signals.
+PWM (Pulse Width Modulation) is used to generate variable duty cycle signals.  
 a.Fast PWM
 Timer counts from BOTTOM to TOP and resets.
 TOP can be fixed (MAX) or set via OCRxA or ICRx.
-Generates high-frequency PWM signals.
+Generates high-frequency PWM signals.  
 b.Phase Correct PWM
 Timer counts up from BOTTOM to TOP, then down to BOTTOM.
 Produces symmetrical PWM waveform.
