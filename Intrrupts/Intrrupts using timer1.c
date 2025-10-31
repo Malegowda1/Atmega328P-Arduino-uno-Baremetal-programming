@@ -16,11 +16,10 @@ int main()
    GPIOD->Direction = 0x80;//PD7 direction set
    sei();//Enabling the global intrrupt
    timer_configuration();
-   
+ Timer1_->timercounter_1[0]=0xBD;//F0BD For 250milli second 
+ Timer1_->timercounter_1[1]=0xF0;
   while(1)
 {
-   Timer1_->timercounter_1[0]=0xBD;//F0BD For 250milli second 
-   Timer1_->timercounter_1[1]=0xF0;
   if(count<20)//for 5sec delay
   {
    GPIOB->Bitset = 0x80;
@@ -39,4 +38,6 @@ int main()
 ISR(TIMER1_OVF_vect)
 {
  count = count + 1;
+ Timer1_->timercounter_1[0]=0xBD;//F0BD For 250milli second 
+ Timer1_->timercounter_1[1]=0xF0;
 }
