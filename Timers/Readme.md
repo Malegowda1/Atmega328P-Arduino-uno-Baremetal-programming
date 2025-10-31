@@ -7,8 +7,7 @@ These timers are versatile and can be used for:
 2.Creating PWM signals  
 3.Measuring time intervals  
 4.Triggering interrupts  
-Timer Modes  
-1. Normal ModesThe timer counts from BOTTOM (0) to MAX.
+Timer Modes  1. Normal ModesThe timer counts from BOTTOM (0) to MAX.
 On reaching MAX, it overflows and restarts from 0.
 Overflow can trigger an interrupt.
 Used for simple time delays or overflow-based timing.
