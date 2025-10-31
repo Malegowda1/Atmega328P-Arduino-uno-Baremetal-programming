@@ -2,7 +2,7 @@
 Interrupts are hardware-triggered events that temporarily pause the main program flow to execute a specific function called an Interrupt Service Routine (ISR).  
 This allows the microcontroller to respond immediately to time-critical events like timer overflows, external signals, or communication events.  
 **Interrupt Service Routines (ISRs)**  
-An ISR is a special function that runs automatically when a specific interrupt occurs. It is defined using the ISR() macro in AVR C.
+An ISR is a special function that runs automatically when a specific interrupt occurs. It is defined using the ISR() macro in AVR C.  
 Key Properties:  
 1.No return value  
 2.No parameters  
