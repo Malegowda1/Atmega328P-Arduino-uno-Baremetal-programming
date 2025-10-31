@@ -1,0 +1,14 @@
+#include "Common.h"
+
+int main()
+{
+  // Configure PB5 (D13) as output and turn off initially
+    GPIOB->Direction |= 0x20;   // Set 6th bit  (PB5) as output
+    GPIOB->Bitset &= ~0x20;     // Clear 6th bit  (turn off LED)
+while(1)
+{
+ GPIOB->Bitset & = 0x20;
+ 
+}
+
+}
