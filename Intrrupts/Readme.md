@@ -9,4 +9,4 @@ Key Properties:
 3.Should be short and fast  
 4.Automatically triggered by hardware  
 **Note**  
-To use interrupts in ATmega328P we should enable global intrrupts(sei()) and and for clearing the global intrrupt we should use cli() syntax
+To use interrupts in ATmega328P we should enable global intrrupts(sei()) and for clearing the global intrrupt we should use cli() syntax
