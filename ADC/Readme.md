@@ -4,6 +4,7 @@ voltages, such as those from sensors, potentiometers, or environmental modules, 
 With a resolution of 10 bits, it can differentiate between 1024 (2^10) distinct levels, providing a fine-grained representation of the input voltage. For instance, 
 When configured with a 5V reference, the ADC can detect voltage changes as small as approximately 4.88 millivolts, making it sufficiently precise for a vast array 
 of hobbyist and industrial applications, from simple light dimmers to complex data acquisition systems.  
+
 **Key Features and Operational Mechanics**  
 The ADC in the ATmega328P is both versatile and configurable, featuring an 8-channel analogue input multiplexer that allows it to read from up to six single-ended 
 input pins (ADC0 to ADC5, corresponding to Arduino pins A0 to A5) and select internal sources, such as the temperature sensor. A fundamental aspect of its operation is 
@@ -13,6 +14,7 @@ the ADC incorporates a programmable prescaler, which is essential for deriving a
 and the full 10-bit accuracy, the ADC requires an operating frequency between 50 kHz and 200 kHz. In a standard 16 MHz Arduino setup, this is typically achieved by 
 setting a division factor of 128, resulting in an efficient ADC clock of 125 kHz. A single conversion in normal mode takes 13 ADC clock cycles, translating to a 
 conversion time of just 104 microseconds, enabling rapid and responsive sampling of analogue signals  
+
 **Modes of Operation and Practical Implementation**  
 The ADC offers several operational modes to suit different application needs, primarily single-conversion and free-running modes. In single conversion mode, the 
 ADC performs one conversion upon a software command and then stops, making it ideal for applications where power efficiency or non-continuous sampling is paramount. 
