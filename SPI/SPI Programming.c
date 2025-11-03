@@ -7,7 +7,7 @@ void spi_inti()//Intialisation
   SPI_->Spi_data_regsister = 0x00;
 }
 
-void configuration()
+void gpio_configuration()
 {
  GPIOB->Direction=0x2C;// 0010 1100 MOSI (PB3), SCK (PB5), SS (PB2) as output.MISO (PB4) as input.
 }
@@ -28,7 +28,7 @@ int main()
 {
   Serial.begin(9600);
   spi_inti();
-  configuration();
+  gpio_configuration();
   while(1)
   {
     spi_send_dta(0xAA);
