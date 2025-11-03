@@ -1,3 +1,4 @@
+//Steps configuration(Pins directions),Initialisation(Control register),sending and Receiving the data
 #include "Common.h"
 void spi_inti()//Intialisation
 {
@@ -8,14 +9,20 @@ void spi_inti()//Intialisation
 
 void configuration()
 {
- GPIOB->Direction=0x2C;//00101100
+ GPIOB->Direction=0x2C;// 0010 1100 MOSI (PB3), SCK (PB5), SS (PB2) as output.MISO (PB4) as input.
 }
 
-void spi_send_dta()
+void spi_send_dta(uint8_t data)
 {
-  SPI_->Spi_control_Register = 0xAB;//1010 1011
-   while(!((SPI_->Spi_Status_Register) & (0x80)));
-   SPI_->Spi_Status_Register = 0x80;
+  SPI_->Spi_control_Register = data;//1010 1011 
+  while(!((SPI_->Spi_Status_Register) & (0x80)));// wait for the complete transfering of the data
+  SPI_->Spi_Status_Register = 0x80;//clearing the intrrupt flag
+}
+uint8_t spi_receive_dat()
+{
+ while(!((SPI_->Spi_Status_Register) & (0x80)));
+ return  SPI_->Spi_data_regsister ;
+ return  
 }
 int main()
 {
@@ -24,9 +31,9 @@ int main()
   configuration();
   while(1)
   {
-    
-    Serial.println(SPI_->Spi_Status_Register);
-    // spi_send_dta();
+    spi_send_dta(0xAA);
+    uint8_t spi_receiced = spi_receive_dat();
+    Serial.Println(spi_receiced);
   }
   
 }
