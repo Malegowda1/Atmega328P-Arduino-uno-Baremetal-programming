@@ -16,17 +16,20 @@ void UartInitialize()
 {
    USART->UArtCSB = 0x18; // Enable TX and RX (TXEN=1, RXEN=1)
    USART->UArtCSC = 0x06;// 8-bit data, 1 stop bit, no parity
+   
 }
 
 void Uart_Send(unsigned char UartDat)
 {
   while (!(USART->UArtCSA & 0x20));// Wait until UDRE (data register empty)
   USART->UDn = UartDat;// Load data into transmit register
+  Serial.println(USART->UDn);
 }
 
 
 int main()
 {
+ Serial.begin(9600);
  UartInitialize();
  BaudrateSet(9600);
  Uart_Send('A');
