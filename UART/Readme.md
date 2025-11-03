@@ -1,3 +1,4 @@
+
 UART (Universal Asynchronous Receiver/Transmitter) is a hardware communication protocol used for asynchronous serial communication between devices. It is widely used in 
 embedded systems for transmitting and receiving data over a simple two-wire interface: TX (Transmit) and RX (Receive).  
 **Note**   
