@@ -1,0 +1,32 @@
+#include "Common.h"
+void spi_inti()//Intialisation
+{
+  SPI_->Spi_control_Register = 0x51;//0101 0001 SPI Enable,Data order(MSB or LSB First),Master or slave select,clock polarity,clock phase,SPI Clock rate select
+  SPI_->Spi_Status_Register = 0x00;
+  SPI_->Spi_data_regsister = 0x00;
+}
+
+void configuration()
+{
+ GPIOB->Direction=0x2C;
+}
+
+void spi_send_dta()
+{
+  SPI_->Spi_control_Register = 0xAB;
+   while(!((SPI_->Spi_Status_Register) & (0x80)));
+   SPI_->Spi_Status_Register = 0x80;
+}
+int main()
+{
+  Serial.begin(9600);
+  spi_inti();
+  configuration();
+  while(1)
+  {
+    
+    Serial.println(SPI_->Spi_Status_Register);
+    // spi_send_dta();
+  }
+  
+}
