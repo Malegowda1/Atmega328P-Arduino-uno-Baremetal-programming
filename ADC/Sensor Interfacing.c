@@ -1,5 +1,5 @@
+//Sensor it connected to A0 and step size is configured as 4.8mv (5/1024)
 #include "Common.h"
-
 uint32_t final_data = 0;
 void ADC_configuration()
 {
@@ -16,9 +16,9 @@ int main()
  while(1)
    {
     ADC_->ADCcltr_statusReg_A | = 0x40;//start the conversion
-    while((ADC_->ADCcltr_statusReg_A) & (0x10))== 0);//ADIF monitoring
+    while((ADC_->ADCcltr_statusReg_A & 0x10)== 0);//ADIF monitoring
     ADC_->ADCcltr_statusReg_A |=0x10;//ADIF clearing
-  // ADC_->ADCcltr_statusReg_A &=~(0x40);
+  // ADC_->ADCcltr_statusReg_A &=~(0x40);//stoping will be done by hardware 
     final_data = (((uint8_t)ADC_->ADCdataregister[0]) | ((uint16_t)ADC_->ADCdataregister[1] << 8));
    Serial.println(final_data);
    }
