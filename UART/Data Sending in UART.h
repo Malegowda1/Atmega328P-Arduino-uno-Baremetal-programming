@@ -23,7 +23,7 @@ void Uart_Send(unsigned char UartDat)
 {
   while (!(USART->UArtCSA & 0x20));// Wait until UDRE (data register empty)
   USART->UDn = UartDat;// Load data into transmit register
-  Serial.println(USART->UDn);
+  //Serial.println(USART->UDn); check this this will work cause usign the Uart_Send('A');
 }
 
 
