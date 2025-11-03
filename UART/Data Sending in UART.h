@@ -20,8 +20,8 @@ void UartInitialize()
 
 void Uart_Send(unsigned char UartDat)
 {
-  while (!(USART->UArtCSA & 0x20));//Wait to until the register is empty
-  USART->UDn = UartDat;// load UartDat into the the udn for transmission
+  while (!(USART->UArtCSA & 0x20));// Wait until UDRE (data register empty)
+  USART->UDn = UartDat;// Load data into transmit register
 }
 
 
