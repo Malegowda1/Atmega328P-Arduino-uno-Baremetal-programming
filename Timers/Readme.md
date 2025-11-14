@@ -26,3 +26,7 @@ b.Phase Correct PWM
 Timer counts up from BOTTOM to TOP, then down to BOTTOM.
 Produces symmetrical PWM waveform.
 Useful for motor control applications.
+**Register involved and their functions**
+1.TCCR0A :-non-PWM Mode with  Normal port operation, OC0A disconnected and selection of waveform generation mode as normal(0x00 for normal operation)
+2.TCCR0B:- prescaled clock selection 
+3.TCNTO
