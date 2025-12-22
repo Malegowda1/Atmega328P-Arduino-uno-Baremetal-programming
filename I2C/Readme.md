@@ -7,7 +7,7 @@ to microcontrollers and its data transmitting speeds are Standard (100 kbps), Fa
 4.TWDR – Data Register  
 5.TWCR – Control Register  
 **I2C Frame**  
-Start Slave+R/W Ack data Ack stop  
+Start + Slave address + R/W + Ack + data + Ack + stop  
 **steps**  
 1.Set TWCR with int,en and start bit and wait for the intrrupt to be generate,check the status register with the start condition and show the error if started.  
 2.Load TWDR with the slave address and clear the intrrupt along with enable wait for the intrrupt flag to set and ack and nack will be shown with check the status.  
