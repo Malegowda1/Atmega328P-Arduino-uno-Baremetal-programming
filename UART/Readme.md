@@ -22,3 +22,4 @@ timing.
 **Transmission:**
 The transmitter converts parallel data into serial form and sends it bit by bit.
 The receiver reconstructs the serial data back into parallel form.
+
