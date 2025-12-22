@@ -11,7 +11,7 @@ void configuration()
 }
 int delay_()//timer0
 {
- for(int i=0;i<1000;i++)//1 Sec delay
+ for(int i=0;i<1000;i++)//10 Sec delay
 {
  Timer0_->Timerconter = 100;//10milli second
  while((Timerintrtflag_0 & 0x01)==0);//Wait for overflow flag to set
