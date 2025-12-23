@@ -21,8 +21,7 @@ void spi_send_dta(uint8_t data)
 uint8_t spi_receive_dat()
 {
  while(!((SPI_->Spi_Status_Register) & (0x80)));
- return  SPI_->Spi_data_regsister ;
- return  
+ return  SPI_->Spi_data_regsister ;  
 }
 int main()
 {
