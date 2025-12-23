@@ -14,7 +14,7 @@ void gpio_configuration()
 
 void spi_send_dta(uint8_t data)
 {
-  SPI_->Spi_control_Register = data;//1010 1011 
+  SPI_->Spi_data_regsisterr = data;//1010 1011 
   while(!((SPI_->Spi_Status_Register) & (0x80)));// wait for the complete transfering of the data
   SPI_->Spi_Status_Register = 0x80;//clearing the intrrupt flag
 }
