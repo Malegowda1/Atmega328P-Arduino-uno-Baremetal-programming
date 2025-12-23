@@ -55,7 +55,7 @@ TWI_Status TwI_SendSlave_address(char Action, char slaveaddress)
       if(((TWI_config->TWI_Status_register)&(Sla_W_Ack)) == Sla_W_Ack)
       {
         temp = pass;
-       PORTB |= (1<<5);
+       PORTB |= (1<<5);//Debugging with on board led
       }
       }
       else
